@@ -45,3 +45,4 @@
   Make an account to create or view posts. Happy connecting!
   
 ### Link to YouTube video:
+https://www.youtube.com/watch?v=pTJwIEiPk1s
