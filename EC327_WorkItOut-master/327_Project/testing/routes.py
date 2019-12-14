@@ -95,8 +95,7 @@ def send_reset_email(user):
     msg=Message('Password Reset Request', sender='projecttinder327@gmail.com', recipients=[user, email])
     msg.body = f'''To reset yout password, visit the following link:
 {url_for('reset_token', token=token, _external=True)}
-If you did not make this request, ignore this email
-'''
+If you did not make this request, ignore this email'''
     mail.send(msg)
 
 @app.route("/rest_password", methods=['GET', 'POST'])
@@ -128,7 +127,7 @@ def reset_token():
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
 
-
+#creates new posts
 @app.route("/post/new",methods=['GET', 'POST'])
 @login_required
 def new_post():
@@ -146,7 +145,7 @@ def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
 
-
+#update posts
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
@@ -166,7 +165,7 @@ def update_post(post_id):
     return render_template('createPost.html', title='Update Post',
                            form=form, legend='Update Post')
 
-
+#delete posts 
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
 def delete_post(post_id):
