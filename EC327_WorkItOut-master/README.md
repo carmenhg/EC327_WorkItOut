@@ -1,25 +1,18 @@
+# EC327_WorkItOut
 
-# EC327_WorkItOut	# EC327_WorkItOut
-
-
-Team Members:	### Team Members:
-  Carmen Hurtado, Unmol Gill, Mrinal Ghosh, Eric Benfaida	  Carmen Hurtado, Unmol Gill, Mrinal Ghosh, Eric Benfaida
-
-
-Project overview: 	### Project overview: 
-  We developed a web application called "Work it Out" using Flask framework and Python programming language. This web app is 	  We developed a web application called "Work it Out" using Flask framework and Python programming language. This web app is 
-  a space for users to share projects they are working on in order to unite with other users that are interested in 	  a space for users to share projects they are working on in order to unite with other users that are interested in 
-  contributing. We included a "matching" algorithms that will refine the search for the user by filtering out the projects that 	  contributing. We included a "matching" algorithms that will refine the search for the user by filtering out the projects that 
-  "match" with their preferences and interest. 	  "match" with their preferences and interest. 
-
-
-How to "build" the project:	### How to "build" the project:
-
+### Team Members:
+  Carmen Hurtado, Unmol Gill, Mrinal Ghosh, Eric Benfaida
+  
+### Project overview: 
+  We developed a web application called "Work it Out" using Flask framework and Python programming language. This web app is 
+  a space for users to share projects they are working on in order to unite with other users that are interested in 
+  contributing. We included a "matching" algorithms that will refine the search for the user by filtering out the projects that 
+  "match" with their preferences and interest. 
+  
+### How to "build" the project:
   Download or update python to version 3.6+ as seen on https://www.python.org/downloads/ </br>
-
   Install necessary python libraries using pip (or pip3) on the commandline.
-Link to YouTube video:	```
-
+```
   pip install numpy
   pip install flask
   pip install Pillow
@@ -49,5 +42,5 @@ Link to YouTube video:	```
 ```
   Clicking on the URL (http://127.0.0.1:5000/) should open WorkItOut in a new browser tab </br>
   Make an account to create or view posts. Happy connecting!
-
+  
 ### Link to YouTube video:
