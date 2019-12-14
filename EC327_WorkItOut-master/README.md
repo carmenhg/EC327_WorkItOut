@@ -1,4 +1,5 @@
 # EC327_WorkItOut
+![WorkItOut](../WorkItOut.png)
 
 ### Team Members:
   Carmen Hurtado, Unmol Gill, Mrinal Ghosh, Eric Benfaida
