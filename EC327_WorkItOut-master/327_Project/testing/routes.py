@@ -15,7 +15,6 @@ def home():
     posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
-
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
@@ -95,7 +94,8 @@ def send_reset_email(user):
     msg=Message('Password Reset Request', sender='projecttinder327@gmail.com', recipients=[user, email])
     msg.body = f'''To reset yout password, visit the following link:
 {url_for('reset_token', token=token, _external=True)}
-If you did not make this request, ignore this email'''
+If you did not make this request, ignore this email
+'''
     mail.send(msg)
 
 @app.route("/rest_password", methods=['GET', 'POST'])
@@ -127,7 +127,7 @@ def reset_token():
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
 
-#creates new posts
+
 @app.route("/post/new",methods=['GET', 'POST'])
 @login_required
 def new_post():
@@ -145,7 +145,7 @@ def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
 
-#update posts
+
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
@@ -165,7 +165,7 @@ def update_post(post_id):
     return render_template('createPost.html', title='Update Post',
                            form=form, legend='Update Post')
 
-#delete posts 
+
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
 def delete_post(post_id):
@@ -176,6 +176,35 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('home'))
+
+# filtered route
+
+@app.route("/Engineering")
+def engineering():
+    posts = Post.query.all()
+    return render_template('engineering.html', posts=posts)
+
+@app.route("/Business")
+def business():
+    posts = Post.query.all()
+    return render_template('business.html', posts=posts)
+
+@app.route("/Science")
+def science():
+    posts = Post.query.all()
+    return render_template('science.html', posts=posts)
+
+@app.route("/Math")
+def math():
+    posts = Post.query.all()
+    return render_template('math.html', posts=posts)
+
+@app.route("/Art")
+def art():
+    posts = Post.query.all()
+    return render_template('art.html', posts=posts)
+
+
 
 
 
