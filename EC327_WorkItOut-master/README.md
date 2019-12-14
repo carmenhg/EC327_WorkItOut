@@ -11,7 +11,7 @@
   
 ### How to "build" the project:
   Download or update python to version 3.6+ as seen on https://www.python.org/downloads/ </br>
-  Install necessary python libraries using pip (or pip3).
+  Install necessary python libraries using pip (or pip3) on the commandline.
 ```
   pip install numpy
   pip install flask
