@@ -43,6 +43,14 @@
                     {{ form.tag(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
+            <div class = "form-group">
+                Engineering<input type = "checkbox" value= "1" name = "categCheckbox">
+                Business<input type = "checkbox" value= "2" name = "categCheckbox">
+                Science<input type = "checkbox" value= "3" name = "categCheckbox">
+                Math<input type = "checkbox" value= "4" name = "categCheckbox">
+                Art<input type = "checkbox" value= "5" name = "categCheckbox">
+            </div>
+
         </fieldset>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
